@@ -1,11 +1,12 @@
 - hosts: aws
   become: true
-tasks:
+  
+  tasks:
     - name: Example from Ansible Playbook
       ping:
       register: ping_output
       
-    -name: Output Details
+    - name: Output results
       debug:
         msg: "{{ping_output}}"
         
